@@ -28,10 +28,10 @@ export default ({
   });
 
   useEffect(() => {
-    window.addEventListener('scroll', handle);
+    window.addEventListener('scroll', handle, true);
 
     return () => {
-      window.removeEventListener('scroll', handle);
+      window.removeEventListener('scroll', handle, true);
     };
   }, [sectionElementRefs, offsetPx]);
   return activeSection;
